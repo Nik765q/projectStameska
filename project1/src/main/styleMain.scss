@@ -1,6 +1,20 @@
 .simpleMain{
     flex: 1 0 auto;
     display: flex;
-    flex-direction: column;
-    color: aqua;
+    width: 100%;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    .mainImg{
+        background: gray;
+        width: 61.7%;
+        border-right: 2px solid black;
+    }
+    // @media screen and (max-width: 420px) {
+    //     flex-direction: column;
+    //     .mainImg{
+    //         width: 100%;
+    //         border-right: none;
+    //         height: 150pxs;
+    //     }
+    // }
 }

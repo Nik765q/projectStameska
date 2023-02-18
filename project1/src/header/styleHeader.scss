@@ -1,3 +1,95 @@
-header{
-    color: red;
+.header{
+    width: 100%;
+    display: flex;
+    .headerMenu{
+        display: flex;
+        flex-direction: column;
+        width: 4%;
+        height: auto;
+        div{
+            height: 120px;
+            width: 100%;
+            writing-mode: sideways-lr;
+            display: flex;
+            justify-content: end;
+            padding: 2px 2px;
+            border: 2px solid black;
+            border-bottom: none;
+            transition: 1s;
+            &:last-of-type{
+                border-bottom: 2px solid black;
+            }
+            &:hover{
+                background: black;
+                color: white;
+                transform: rotate(90);
+            }
+        }
+        @media screen and (max-width: 600px) {
+            width: 7%;
+        }
+    }
+    .headerMain{
+        margin: 0;
+        display: flex;
+        width: 96%;
+        .headerMainText{
+            min-width: 60%;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 15px;
+            border-left: none;
+            .mainTextH1{
+                font-weight: bold;
+            }
+        }
+        .headerMainImg{
+            border: 2px solid black;
+            width: 40%;
+            border-left: none;
+            background: gray;
+        }
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+                .headerMainText{
+                    .mainTextH1{
+                        margin: 0 0 7px 0;
+                    }
+                }
+                .headerMainImg{
+                    height: 100%;
+                    width: 100%;
+                    border-top: none;
+                }
+        }
+    }
+    @media screen and (max-width: 420px) {
+        flex-direction: column;
+        .headerMenu{
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            div{
+                writing-mode: unset;
+                width: 100%;
+                height: auto;
+                justify-content: start;
+                padding: 2px 0 10px 2px;
+                border-right: none;
+                &:last-of-type{
+                    border-bottom: none;
+                    border-right: 2px solid black;
+                }
+            }
+        }
+        .headerMain{
+            width: 100%;
+            border-left: 2px solid black;
+            .headerMainImg{
+                height: 300px;
+            }
+        }
+    }
 }
